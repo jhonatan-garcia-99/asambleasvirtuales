@@ -1,0 +1,75 @@
+    <div class="container">
+        <div class="row">
+  
+  <div class="col-md-6 mt-4">
+      <div class="card-header">
+                        <g4>Asamblea</g4>
+                    </div>
+                <div class="card" style='background-image: url("https://newvideoautogalias.digitalrocket.co/user.png"); background-position: center;  background-repeat: no-repeat; background-size: cover;'>
+                    
+                    
+                    <div id="local_stream"  style=' width: 340px; height: 250px; '>holas</div>
+
+                    
+                </div>
+                
+            </div>
+            <div class="col-md-6 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>Votaciones</g4>
+                    </div>
+                    <div  style=" margin-left: 1rem; margin-top: 2rem; margin-bottom: 1rem; margin-right: 1rem;width: 340px; height: 250px;  ">
+                    <h4 class="h4">Titulo de la pregunta</h4>
+                    <p class="text-lowercase">Texto adicional si se necesita especificar algo0</p>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2 btn-group-lg" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-secondary">opcion 1</button>
+                            <h1 style="color: cornsilk;">|</h1>
+                            <button type="button" class="btn btn-secondary">opcion 2</button>
+                                                        <h1 style="color: cornsilk;">|</h1>
+
+                            <button type="button" class="btn btn-secondary">opcion 3</button>
+                                                        <h1 style="color: cornsilk;">|</h1>
+
+                            <button type="button" class="btn btn-secondary">opcion 4</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+         
+        </div>
+    </div>
+
+  <div class="container">
+        <div class="row">
+  
+  <div class="col-md-12 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>Chat</g4>
+                        <input id="nombre" type="text" value="{{datos.nombres_apalledios}}" readonly="readonly">
+                    </div>
+                    <div id="chat" class="card-body" style="height: 200px; overflow-y: scroll;">
+
+                    </div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">    
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append">
+                                <input type="submit"  class="btn btn-warning">
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                
+            </div>
+         
+        </div>
+    </div>
+    <script src="../../socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/js/socket.js"></script>

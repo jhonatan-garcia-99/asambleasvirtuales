@@ -1,0 +1,31 @@
+<div class="col-md-4 mx-auto">
+
+    <div class="card"><div class="card-header">
+          <h3>Datos de Propietario</h3>
+        </div>
+        <div class="card-body">
+            <form action="/links/edit/{{link.id}}/{{link.estado}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombres_apalledios" class="form-control" placeholder="Nombres y Apalledios" value="{{link.nombres_apalledios}}" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="param_vivienda_1" class="form-control" placeholder="Torre" value="{{link.param_vivienda_1}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="param_vivienda_2" class="form-control" placeholder="Apartamento" value="{{link.param_vivienda_2}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="correo_electronico" class="form-control" placeholder="Correo" value="{{link.correo_electronico}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="numero_documento" class="form-control" placeholder="Documento" value="{{link.numero_documento}}" autofocus>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

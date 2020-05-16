@@ -1,0 +1,78 @@
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-md-6 mt-4 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>Generar Pregunta</g4>
+                    </div>
+                    <div class="card-body" >
+                        <form action="/votaciones" method="post">
+                            <div class="form-group">
+                                <label for="Titulopregunta">Titulo</label>
+                                <input class="form-control" type="text" name="Titulopregunta" id="Titulopregunta" placeholder="Titulo de la Pregunta" autofocus>
+                                {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
+                            </div>
+                            <div class="form-group">
+                                <label for="texto">Descripcion</label>
+                                <input class="form-control" type="text" name="texto" id="texto" placeholder="Texto adicional" >
+                            </div>
+                            <div class="form-group">
+                                <label for="opcionesvotacion">Cantidad de opciones de votacion</label>
+                                <select class="form-control" name="opcionesvotacion" id="opcionesvotacion">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="textoopcionesvotos">Texto de las Opciones</label>
+                                <input class="form-control" type="text" name="textoopcionesvotos" id="textoopcionesvotos" placeholder="Texto opcines" >
+                                <small id="emailHelp" class="form-text text-muted">Separar cada texto de la opcion con una coma ejemplo(Si,No,Voto en blanco)</small>
+                            </div>
+                              <button type="submit" class="btn btn-primary mb-2">Confirmar Votacion</button>
+                        </form>
+                    </div>  
+                </div>   
+            </div>
+        </div>
+    </div>
+     <div class="container">
+        <div class="row">
+          
+            <div class="col-md-8 mt-4 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>Listado de votaciones activas</g4>
+                    </div>
+                    <div class="card-body" >
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                
+                                <th scope="col">Titulo pregunta</th>
+                                <th scope="col">Opciones de votacion</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each links}}
+                                    <tr> 
+                                        <td>{{Titulopregunta}}</td>
+                                        <td>{{textoopcionesvotos}}</td>
+                                        <td>{{timeago create_at}}</td>
+                                        <td>{{Estado}}</td>
+                                        <td><a class="btn btn-danger" href="/delete/{{Titulopregunta}}">Desactivar </a></td>
+                                    </tr>
+                                {{/each}}      
+                            </tbody>
+                        </table>
+                    </div>  
+                </div>   
+            </div>
+        </div>
+    </div>

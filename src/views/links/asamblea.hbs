@@ -1,0 +1,66 @@
+    <div class="container">
+        <div class="row">
+  
+  <div class="col-md-6 mt-4">
+      <div class="card-header">
+                        <g4>Asamblea</g4>
+                    </div>
+                <div class="card" style='background-image: url("https://newvideoautogalias.digitalrocket.co/user.png"); background-position: center;  background-repeat: no-repeat; background-size: cover;'>
+                    
+                    
+                    <div id="local_stream"  style=' width: 340px; height: 250px; '></div>
+
+                    
+                </div>
+                
+            </div>
+            <div class="col-md-6 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>Votaciones</g4>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-dark" id="datosasamblea">
+                            Votacion
+                        </button>
+                        <div id="pregunta">
+
+                        </div>
+                    </div>
+                
+            </div>
+         
+        </div>
+    </div>
+
+  <div class="container">
+        <div class="row">
+  
+  <div class="col-md-12 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>Chat</g4>
+                        <input id="nombre" type="text" value="{{datos.nombres_apalledios}}" readonly="readonly">
+                    </div>
+                    <div id="chat" class="card-body" style="height: 200px; overflow-y: scroll;">
+
+                    </div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">    
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append">
+                                <input type="submit"  class="btn btn-warning">
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                
+            </div>
+         
+        </div>
+    </div>
+    <script src="../../socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/js/socket.js"></script>
+    <script src="/js/votaciones.js"></script>
+
